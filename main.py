@@ -1,24 +1,22 @@
 import os, sys
+import pandas as pd
+import numpy as np
 from visa.constant import *
 from visa.logger import logging
-from visa.entity.config_entity import DataIngestionConfig
-from visa.entity.artifact_entity import DataIngestionArtifact
 from visa.exception import CustomException
-from datetime import date
-from collections import namedtuple
-from visa.config.configuration import Configuration
-from visa.components.data_ingestion import DataIngestion
-from visa.pipeline.pipeline import Pipeline
-
+from visa.pipeline.pipeline import Pipeline 
+import os, sys
 
 def main():
     try:
         pipeline = Pipeline()
         pipeline.run_pipeline()
+       
     except Exception as e:
-        raise CustomException(e,sys)
-    
+        logging.error(f"{e}")
+        print(e)
 
-if __name__ == "__main__":
-    main()    
-    
+
+
+if __name__=="__main__":
+    main()
