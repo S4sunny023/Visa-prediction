@@ -6,7 +6,7 @@ LOG_DIR = "logs"
 
 CURRENT_TIME_STEMP = f"log{datetime.now().strftime('%Y-%m-%d %H-%M-%S')}"
 
-# year, Month, Day, Hours, Mintue, Sec
+
 
 log_file_name = f"logs{CURRENT_TIME_STEMP}.log"
 
